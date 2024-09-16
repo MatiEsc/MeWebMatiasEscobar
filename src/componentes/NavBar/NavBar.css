@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+
+#navbar {
+  background-color: rgb(13, 26, 34);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 90px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  position: sticky;
+  margin-top: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+#navbar .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+#navbar .logo {
+  height: 30px;
+  margin-right: 10px;
+  margin-left: 120px;
+  width: 90px;
+  height: 90px;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin-right: 120px;
+  padding: 0;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: #f5e4d5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: transform 0.3s, font-size 0.3s;
+}
+
+#navbar a:hover {
+  transform: scale(1.1);
+  font-size: 15px;
+}
+
+#navbar .logo-container .logoLink {
+  text-decoration: none;
+  color: inherit;
+  transition: none;
+  font-size: 0px;
+}
+
+#navbar .logo-container .logoLink:hover {
+  transform: none;
+  font-size: 0px;
+}
+
+.nav_toggle {
+  display: none;
+}
+
+.logoMobile {
+  margin-left: 24px;
+  width: 60x;
+  height: 60px;
+}
+
+.info {
+  width: 100vw;
+  background: #d7a733; /* Color base */
+  background: linear-gradient(
+    90deg,
+    rgba(215, 167, 51, 1) 0%,
+    /* Color dorado claro */ rgba(171, 142, 36, 1) 50%,
+    /* Color dorado oscuro */ rgba(215, 167, 51, 1) 100% /* Color dorado claro */
+  );
+
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  color: white;
+}
+
+/* ESTILOS PARA DISPOSITIVOS PEQUEÑOS */
+@media (max-width: 768px) {
+  #navbar ul li a {
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: rgb(13, 26, 34);
+    text-align: center;
+  }
+  #navbar ul li a::before {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    #navbar .nav_items {
+      position: absolute;
+      top: 0px;
+      right: -7.5rem;
+      background: rgb(13, 26, 34);
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      height: 200px;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-130%);
+      transition: 0.3s ease all;
+      padding: 10px 0;
+    }
+  }
+
+  .nav_items a {
+    text-align: center;
+  }
+
+  .nav_toggle {
+    display: flex !important;
+    flex-direction: column;
+    margin: 15px;
+  }
+
+  .nav_toggle span {
+    width: 30px;
+    height: 4px;
+    background: #f5e4d5;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transform-origin: 5px 0px;
+    transition: all 0.2s linear;
+  }
+
+  .close span {
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+
+  .close span:nth-child(2) {
+    display: none;
+  }
+
+  .close span:nth-child(3) {
+    transform: rotate(-45deg) translate(-5px, 1px);
+  }
+
+  .open {
+    transform: translateX(0) !important;
+  }
+}

@@ -1,0 +1,162 @@
+.containerContacto {
+  display: grid;
+  background-color: #333;
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "textoFormulario formulario"; /* El texto a la izquierda y el formulario a la derecha */
+}
+
+.textoFormulario {
+  grid-area: textoFormulario;
+  padding: 40px;
+}
+
+.formulario {
+  grid-area: formulario;
+  padding: 40px;
+}
+
+.h2Contacto {
+  color: #d7a733;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 0 20px 0;
+  margin-top: 40px;
+}
+
+.textoFormulario p {
+  margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: larger;
+  text-align: left;
+  color: #f5e4d5;
+}
+
+.textoFormulario p br {
+  content: "";
+  display: block;
+  margin-bottom: 20px;
+}
+
+.botonContacto {
+  display: inline-block;
+  background-color: #d7a733;
+  color: #0e1a21;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+  border: 2px solid transparent;
+}
+
+.botonContacto:hover {
+  background-color: #0e1a21;
+  color: #d7a733;
+  border-color: #d7a733;
+  transform: scale(1.05);
+}
+
+.botonContacto:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 183, 77, 0.5);
+}
+
+.botonContacto:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  border-color: #ccc;
+}
+
+.link-contacto {
+  color: #f5e4d5; /* Color de texto del enlace */
+  text-decoration: none; /* Quita el subrayado del enlace */
+  display: flex; /* Alinea el ícono y el texto en una fila */
+  align-items: center; /* Alinea verticalmente el ícono y el texto */
+  font-family: "Montserrat", sans-serif; /* Usa la misma fuente para el texto */
+}
+
+.link-contacto:hover {
+  color: #eebb73; /* Color del enlace al pasar el cursor */
+}
+
+/* Estilos para el formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+input,
+textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.icon-contacto {
+  color: #eebb73;
+  font-size: 20px;
+  padding-right: 20px;
+}
+
+.error {
+  color: #d9534f; /* Color rojo para el texto del error */
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px; /* Tamaño de fuente para el texto del error */
+  margin-top: -10px; /* Espacio negativo para acercar el texto del error al campo del formulario */
+  margin-bottom: 15px; /* Espacio debajo del texto del error */
+  padding: 0;
+}
+
+.success {
+  color: #eebb73;
+  font-weight: bold;
+  font-size: x-large;
+  margin-top: 10px;
+}
+/* Media Queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+  .containerContacto {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "textoFormulario"
+      "formulario";
+  }
+
+  .textoFormulario {
+    padding: 10px;
+  }
+
+  .formulario {
+    padding: 10px;
+  }
+
+  .botonContacto {
+    display: block;
+    margin: 20px auto;
+  }
+}

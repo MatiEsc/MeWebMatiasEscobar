@@ -1,0 +1,129 @@
+/* Importa las fuentes de Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.sobre-mi-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Por defecto, los elementos se colocan en una sola columna */
+  align-items: center;
+  padding: 20px; /* Menor espacio en pantallas pequeñas */
+  background-color: #ffffff;
+  position: relative;
+}
+
+.imagen-container {
+  text-align: center; /* Centra la imagen en pantallas pequeñas */
+}
+
+.imagenPersonal {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Mejor ajuste para diferentes tamaños */
+  border-radius: 15%;
+}
+
+.texto-container {
+  text-align: center; /* Centra el texto en pantallas pequeñas */
+  padding: 20px; /* Espacio adicional en pantallas pequeñas */
+  margin-top: 10px;
+}
+
+.nombre {
+  font-size: 2rem; /* Tamaño más pequeño en pantallas pequeñas */
+  color: #333;
+  position: relative; /* Cambiado a relative para el diseño en pantallas pequeñas */
+  right: auto; /* Reajustar alineación */
+  top: auto; /* Reajustar posición vertical */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-align: center; /* Alinea el texto al centro en pantallas pequeñas */
+  z-index: 1;
+}
+
+.titulo {
+  font-size: 2rem; /* Tamaño más pequeño en pantallas pequeñas */
+  color: #555;
+  margin: 20px 0; /* Espacio vertical ajustado */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.descripcion,
+.descripcion1 {
+  font-size: 1rem; /* Tamaño de fuente reducido en pantallas pequeñas */
+  color: #666;
+  line-height: 1.6;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.descripcion strong,
+.descripcion1 strong {
+  color: #000; /* Cambia el color del texto a negro */
+}
+
+.botonReserva {
+  display: inline-block;
+  background-color: #d7a733;
+  color: #0e1a21;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+  border: 2px solid transparent;
+}
+
+.botonReserva:hover {
+  background-color: #0e1a21;
+  color: #d7a733;
+  border-color: #d7a733;
+  transform: scale(1.05);
+}
+
+.botonReserva:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 183, 77, 0.5);
+}
+
+.botonReserva:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  border-color: #ccc;
+}
+
+/* Media Queries para pantallas más grandes */
+@media (min-width: 768px) {
+  .sobre-mi-container {
+    grid-template-columns: 40% 60%; /* Imagen y texto en dos columnas */
+    padding: 50px 100px; /* Espacio mayor en pantallas grandes */
+  }
+
+  .texto-container {
+    text-align: left; /* Alinea el texto a la izquierda en pantallas grandes */
+    padding-left: 30px; /* Espacio adicional en pantallas grandes */
+    margin-left: 10rem;
+  }
+
+  .nombre {
+    font-size: 3rem; /* Tamaño de fuente más grande en pantallas grandes */
+    position: absolute; /* Mantener el texto en una posición fija */
+    right: 80px;
+    top: 0;
+    text-align: right;
+  }
+
+  .titulo {
+    font-size: 3rem; /* Tamaño de fuente más grande en pantallas grandes */
+  }
+
+  .descripcion,
+  .descripcion1 {
+    font-size: 1.2rem; /* Tamaño de fuente más grande en pantallas grandes */
+  }
+}
