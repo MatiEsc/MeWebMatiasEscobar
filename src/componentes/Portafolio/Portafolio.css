@@ -1,5 +1,6 @@
 /* Portafolio.css */
 
+/* Estilos generales para la sección de portafolio */
 .portafolio {
   background-color: #ffffff; /* Fondo blanco para la sección */
   padding: 50px 20px;
@@ -28,11 +29,11 @@
 }
 
 .proyecto {
-  background-color: #f8f9fa; /* Fondo claro para los proyectos */
+  background-color: #f8f9fa;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  width: calc(33.333% - 40px); /* Tres proyectos en una fila con espacio entre ellos */
+  width: calc(33.333% - 40px);
   text-align: left;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -75,6 +76,19 @@
   font-family: "Roboto", sans-serif;
 }
 
+/* Media Queries para responsividad */
+@media (max-width: 1024px) {
+  .proyecto {
+    width: calc(50% - 40px); /* Dos proyectos en una fila en pantallas medianas */
+  }
+}
+
+@media (max-width: 768px) {
+  .proyecto {
+    width: calc(100% - 40px); /* Un proyecto por fila en pantallas pequeñas */
+  }
+}
+
 /* Estilos del modal */
 .modal-overlay {
   position: fixed;
@@ -94,7 +108,7 @@
   padding: 20px;
   border-radius: 10px;
   display: flex;
-  align-items: center;
+  flex-direction: column; /* Cambiado a columna para móviles */
   gap: 20px;
   position: relative;
   max-width: 800px;
@@ -104,13 +118,13 @@
 }
 
 .modal-imagen {
-  width: 40%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
 .modal-detalles {
-  width: 60%;
+  width: 100%;
 }
 
 .modal-titulo {
@@ -150,22 +164,18 @@
   cursor: pointer;
 }
 
-.h2Portfolio {
-  color: rgba(45, 60, 80);
-  font-size: 2.5em;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 10px 0;
-  position: relative; /* Asegura que el pseudo-elemento se posicione en relación con el título */
-}
+/* Media Queries para el Modal */
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column; /* Cambiado a columna para móviles */
+    max-width: 90%; /* Ajusta el ancho máximo del modal en móviles */
+  }
 
-.h2Portfolio::after {
-  content: "";
-  position: absolute;
-  bottom: -10px; /* Ajusta este valor para el espacio entre el texto y la línea */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px; /* Ajusta el ancho de la línea según tu diseño */
-  height: 4px; /* Ajusta la altura de la línea según tu diseño */
-  background-color: #eebb73; /* Color de la línea */
+  .modal-imagen {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del modal en móviles */
+  }
+
+  .modal-detalles {
+    width: 100%; /* Asegura que los detalles ocupen todo el ancho del modal en móviles */
+  }
 }

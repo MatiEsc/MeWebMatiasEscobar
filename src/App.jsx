@@ -1,5 +1,6 @@
 import "./App.css";
 import Contacto from "./componentes/Contacto/Contacto";
+import PreguntasFrecuentes from "./componentes/PreguntasFrecuentes/PreguntasFrecuentes";
 import Footer from "./componentes/Footer/Footer";
 import NavBar from "./componentes/NavBar/NavBar";
 import Portafolio from "./componentes/Portafolio/Portafolio";
@@ -16,6 +17,7 @@ function App() {
         <Servicios />
         <Responsive />
         <Portafolio />
+        <PreguntasFrecuentes />
         <Contacto />
         <Footer />
       </div>

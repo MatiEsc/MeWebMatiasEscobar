@@ -36,6 +36,19 @@
   width: calc(33.333% - 40px); /* Tres servicios en una fila con espacio entre ellos */
   text-align: left;
 }
+.servicio:hover {
+  transform: scale(1.05);
+  background-color: #d7a733;
+  transition: color 0.3s ease; /* Agrega una transición suave para el cambio de color */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  .icono {
+    color: white;
+  }
+  .servicio-descripcion {
+    color: white;
+    font-size: large;
+  }
+}
 
 .servicio-icono {
   text-align: center;
@@ -45,6 +58,11 @@
 .icono {
   font-size: 60px; /* Tamaño del ícono */
   color: #d7a733; /* Color del ícono */
+  transition: color 0.3s ease; /* Agrega una transición suave para el cambio de color */
+}
+
+.icono:hover {
+  color: white; /* Color del ícono en hover */
 }
 
 .servicio-titulo {
