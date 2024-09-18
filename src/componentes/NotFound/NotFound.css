@@ -1,0 +1,59 @@
+/* src/componentes/NotFound.css */
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  text-align: center;
+  background-color: #f8f9fa; /* Color de fondo suave */
+}
+
+.not-found h1 {
+  font-size: 6rem;
+  color: #dc3545; /* Color rojo para el código de error */
+}
+
+.not-found h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.not-found p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.home-link {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d7a733;
+  color: #0e1a21;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+  border: 2px solid transparent;
+}
+
+.home-link:hover {
+  background-color: #0e1a21;
+  color: #d7a733;
+  border-color: #d7a733;
+  transform: scale(1.05);
+}
+
+.home-link:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 183, 77, 0.5);
+}
+
+.home-link:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  border-color: #ccc;
+}

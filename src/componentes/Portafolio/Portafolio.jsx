@@ -59,7 +59,7 @@ function Portafolio() {
   };
 
   return (
-    <section id="portafolio" className="portafolio">
+    <section id="proyectos" className="portafolio">
       <div className="portafolio-container">
         <h2 className="portafolio-titulo h2Portfolio">Algunos proyectos</h2>
         <div

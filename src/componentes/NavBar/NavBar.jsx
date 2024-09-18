@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -34,44 +35,50 @@ const NavBar = () => {
   }, []);
 
   const handleClick = (event, targetId) => {
-    event.preventDefault();
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (window.location.pathname === "/" && targetId) {
+      event.preventDefault();
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
   };
 
   return (
     <>
-      <p className="info">Diseño Web - Landing Page - Ecommerce - WordPress - Marketing Digital </p>
+      <p className="info">Diseño Web - Landing Page - Ecommerce - WordPress - Marketing Digital</p>
       <nav id="navbar">
         <div className="logo-container">
-          <a href="#home" className="logoLink" onClick={(e) => handleClick(e, "home")}>
+          <Link to="/" className="logoLink" onClick={(e) => handleClick(e, "home")}>
             {isMobile ? (
               <img src="/img/logoMobile.webp" alt="Logo Mobile" className="logoMobile" />
             ) : (
               <img src="/img/logoMobile.webp" alt="Logo Desktop" className="logo" />
             )}
-          </a>
+          </Link>
         </div>
         <ul className={`nav_items ${menuVisible ? "open" : ""}`} id="_items">
           <li>
-            <a href="#servicios" onClick={(e) => handleClick(e, "servicios")}>
+            <Link to="/" onClick={(e) => handleClick(e, "servicios")}>
               Servicios
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#portafolio" onClick={(e) => handleClick(e, "portafolio")}>
+            <Link to="/" onClick={(e) => handleClick(e, "planes")}>
+              Planes
+            </Link>
+          </li>
+          <li>
+            <Link to="/" onClick={(e) => handleClick(e, "proyectos")}>
               Proyectos
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#contacto" onClick={(e) => handleClick(e, "contacto")}>
+            <Link to="/" onClick={(e) => handleClick(e, "contacto")}>
               Contacto
-            </a>
+            </Link>
           </li>
         </ul>
-
         <div
           className={`nav_toggle ${menuVisible ? "close" : ""}`}
           id="_toggle"

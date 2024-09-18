@@ -1,0 +1,200 @@
+.promocion-detalle {
+  background-color: #f8f9fa; /* Color de fondo suave */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.promocion-detalle h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.promocion-detalle h3 {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+}
+
+.detalles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .detalles-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.detalle-izquierda,
+.detalle-derecha {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1;
+}
+
+.detalle-izquierda {
+  margin-right: 10px;
+}
+
+.detalle-derecha {
+  margin-left: 10px;
+}
+
+.caracteristicas ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.caracteristicas li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+.caracteristicas li svg {
+  margin-right: 10px;
+  color: #28a745; /* Color verde para los íconos */
+}
+
+.whatsapp-button {
+  display: inline-flex; /* Alineación en línea */
+  align-items: center;
+  background-color: #25d366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Alineación del texto al centro */
+}
+
+.whatsapp-button:hover {
+  background-color: #1da851; /* Color más oscuro al pasar el ratón */
+}
+
+.cuadro-inversion {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-inversion p {
+  margin: 10px 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.info-inversion span {
+  font-weight: bold;
+  color: #d7a733; /* Color dorado para destacar el precio */
+}
+
+.medios-pago {
+  margin-top: 20px;
+}
+
+.logos-pago {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.logo img {
+  max-width: 50px;
+  margin-right: 10px;
+}
+
+.logo p {
+  margin: 0;
+  margin-left: 5px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Estilo para el p al final del componente */
+.promocion-detalle p.final {
+  font-size: 1.1rem; /* Un poco más grande que el texto normal */
+  font-style: italic;
+  color: #666;
+  margin-top: 30px; /* Espacio adicional al final del componente */
+}
+
+/* Estilo para el p debajo de los íconos de check */
+.caracteristicas p {
+  font-size: 1rem; /* Tamaño de fuente similar al resto del contenido */
+  font-style: italic;
+  color: #666;
+}
+
+.parrafoFinal {
+  font-size: 1rem; /* Tamaño de fuente similar al resto del contenido */
+  font-style: italic;
+  color: #666;
+}
+
+.abono-mensual {
+  background-color: #e9ecef; /* Color de fondo suave diferente para la sección */
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.abono-mensual h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.abono-mensual ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.abono-mensual li {
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.abono-mensual .icono-abono {
+  margin-right: 10px;
+  color: #007bff; /* Color azul para los iconos */
+  font-size: 1.3rem; /* Tamaño de los iconos */
+}
+
+.abono-mensual strong {
+  display: block;
+  font-weight: bold;
+  color: #007bff; /* Color azul para los títulos dentro de la lista */
+}
